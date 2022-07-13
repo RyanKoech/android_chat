@@ -3,7 +3,6 @@ package com.example.android_chat
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -49,6 +48,7 @@ class SignupActivity : AppCompatActivity() {
                     //Go to home activity
                     addUserToDatabase(name, email, mAuth.currentUser!!.uid)
                     val intent = Intent(this@SignupActivity, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                 } else {
                     Toast.makeText(this@SignupActivity, "Some error occured", Toast.LENGTH_SHORT).show()
