@@ -11,7 +11,9 @@
         android:layout_above="@id/bottom_actions"
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"/>
 
     <LinearLayout
         android:id="@+id/bottom_actions"
@@ -34,6 +36,7 @@
             android:layout_weight="85"/>
 
         <ImageView
+            android:id="@+id/send_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/send"
